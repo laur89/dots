@@ -1,0 +1,3 @@
+root/
+# following src.ini ignore is for chezmoi_modify_manager (https://vorpalblade.github.io/chezmoi_modify_manager/installation.html):
+**/*.src.ini
