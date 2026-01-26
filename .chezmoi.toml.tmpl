@@ -14,4 +14,16 @@
     # do not show scripts that would be run w/ diff cmd:
     exclude = ["scripts"]
     command = "meld"
-    args = ["--diff", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+    args = ["--diff",
+        {{ printf "%q" "{{ .Destination }}" }},
+        {{ printf "%q" "{{ .Target }}" }},
+    ]
+    # or alternatively to 'command'&'args', use good 'ol delta pager:
+    #pager = "delta"
+[merge]
+    command = "meld"
+    args = ["--diff",
+        {{ printf "%q" "{{ .Destination }}" }},
+        {{ printf "%q" "{{ .Source }}" }},
+        {{ printf "%q" "{{ .Target }}" }},
+    ]
