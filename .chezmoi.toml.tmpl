@@ -1,8 +1,17 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
 
+# note it makes sense to keep only the promptable [data] here;
+# static config should live in .chezmoidata.toml (see https://www.chezmoi.io/reference/special-files/chezmoidata-format/)
 [data]
     email = {{ $email | quote }}
+
 # automatically commit & push changes:
 #[git]
 #    autoCommit = true
 #    autoPush = true
+
+[diff]
+    # do not show scripts that would be run w/ diff cmd:
+    exclude = ["scripts"]
+    command = "meld"
+    args = ["--diff", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
