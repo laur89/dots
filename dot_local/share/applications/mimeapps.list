@@ -1,0 +1,1 @@
+{{- default (print .chezmoi.homeDir "/.config") (env "XDG_CONFIG_HOME") -}}/mimeapps.list
