@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# example for programmatically generating files based on a template
+###########################################################
+#
+#chezmoi execute-template --output=
+#        gmailieer.json.tmpl dict mail {{ .email | quote }}
+#chezmoi execute-template --output=/data/nocow/mail/personal.gmail/.gmailieer.json \
+#        --override-data '{"val":"valYO","key2":"val2"}' < {{ .chezmoi.sourceDir }}/.chezmoitemplates/test
