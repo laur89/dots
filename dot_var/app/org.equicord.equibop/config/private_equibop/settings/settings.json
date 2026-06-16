@@ -268,9 +268,6 @@
         "MessageLogger": {
             "enabled": false
         },
-        "MessageTags": {
-            "enabled": false
-        },
         "MoreQuickReactions": {
             "enabled": false
         },
@@ -572,9 +569,6 @@
             "enabled": false
         },
         "BetterPlusReacts": {
-            "enabled": false
-        },
-        "BetterUserArea": {
             "enabled": false
         },
         "BlockKeywords": {
@@ -1119,6 +1113,12 @@
         },
         "MiddleClickTweaks": {
             "enabled": false
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "Declutter": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -1136,8 +1136,9 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1771521594195
+        "settingsSyncVersion": 1774176257255
     },
     "ignoreResetWarning": false,
-    "userCssVars": {}
+    "userCssVars": {},
+    "mainWindowFrameless": false
 }
